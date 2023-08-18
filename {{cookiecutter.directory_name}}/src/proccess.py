@@ -22,7 +22,10 @@ pd.DataFrame(df.isnull().sum()).T
 msno.matrix(df)
 plt.show()
 
-df.describe()
+# Indique as colunas numericas
+num_cols = []
+
+print(df.describe())
 
 sns.set(style="whitegrid")
 g = sns.countplot(data=df, x="job", hue="deposit")
